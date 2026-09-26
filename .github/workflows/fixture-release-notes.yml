@@ -1,0 +1,48 @@
+name: Fixture release notes
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Fixture release version
+        required: true
+        type: string
+      changes:
+        description: Release changes, one per line
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  release-notes:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Generate and publish release notes
+        env:
+          FIXTURE_RELEASE_VERSION: ${{ inputs.version }}
+          FIXTURE_RELEASE_CHANGES: ${{ inputs.changes }}
+        run: |
+          python - <<'PY'
+          import os
+          from fixture_release_pipeline.release import (
+              generate_release_notes,
+              publish_release_notes,
+          )
+
+          version = os.environ["FIXTURE_RELEASE_VERSION"]
+          changes = os.environ["FIXTURE_RELEASE_CHANGES"].splitlines()
+          notes = generate_release_notes(version, changes)
+          publish_release_notes(version, notes)
+          PY
+      - name: Publish changelog artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: fixture-release-notes-${{ inputs.version }}
+          path: CHANGELOG.md
+          if-no-files-found: error
