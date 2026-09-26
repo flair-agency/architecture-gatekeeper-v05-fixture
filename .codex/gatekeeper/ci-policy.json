@@ -8,18 +8,37 @@
       "reasoningEffort": "low",
       "authorityManifestPath": ".codex/gatekeeper/authorities.json",
       "authorityLimits": {
-        "maxManifestBytes": 16384,
-        "maxMembers": 16,
-        "maxFileBytes": 65536,
-        "maxTotalBytes": 262144,
-        "maxPromptBytes": 524288
+            "maxManifestBytes": 16384,
+            "maxMembers": 16,
+            "maxFileBytes": 65536,
+            "maxTotalBytes": 262144,
+            "maxPromptBytes": 524288
       },
       "ownerAddition": {
-        "grade": "G0",
-        "authorityPath": "docs/architecture.md",
-        "promptPath": ".codex/gatekeeper/owner-addition.md",
-        "schemaPath": ".codex/gatekeeper/owner-addition.schema.json"
+            "grade": "G0",
+            "authorityPath": "docs/architecture.md",
+            "promptPath": ".codex/gatekeeper/owner-addition.md",
+            "schemaPath": ".codex/gatekeeper/owner-addition.schema.json"
       }
-    }
+},
+    "v05-e2e": {
+      "mode": "enforced",
+      "model": "gpt-6-sol",
+      "reasoningEffort": "low",
+      "authorityManifestPath": ".codex/gatekeeper/authorities.json",
+      "authorityLimits": {
+            "maxManifestBytes": 16384,
+            "maxMembers": 16,
+            "maxFileBytes": 65536,
+            "maxTotalBytes": 262144,
+            "maxPromptBytes": 524288
+      },
+      "ownerAddition": {
+            "grade": "G0",
+            "authorityPath": "docs/architecture.md",
+            "promptPath": ".codex/gatekeeper/owner-addition.md",
+            "schemaPath": ".codex/gatekeeper/owner-addition.schema.json"
+      }
+}
   }
 }
