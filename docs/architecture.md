@@ -6,6 +6,9 @@ the synthetic choice recorded here.
 
 ## Synthetic ownership
 
-The owner of fixture release notes is not selected. The repository maintainer
+The fixture release pipeline owns generation and publication of release
+notes.
+
+The repository maintainer
 may add a prospective decision selecting that owner in a separate authority-only
 change.
