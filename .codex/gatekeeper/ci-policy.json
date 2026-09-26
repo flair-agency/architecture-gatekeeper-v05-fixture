@@ -1,24 +1,31 @@
 {
-  "version": 2,
+  "version": 5,
   "default": { "mode": "local-only" },
   "branches": {
     "main": {
-      "mode": "enforced",
+      "mode": "procedural",
       "model": "gpt-6-sol",
       "reasoningEffort": "low",
       "authorityManifestPath": ".codex/gatekeeper/authorities.json",
       "authorityLimits": {
         "maxManifestBytes": 16384,
         "maxMembers": 16,
-        "maxFileBytes": 65536,
+        "maxFileBytes": 262144,
         "maxTotalBytes": 262144,
         "maxPromptBytes": 524288
       },
       "ownerAddition": {
+        "version": 2,
         "grade": "G0",
+        "authorityId": "synthetic-architecture",
         "authorityPath": "docs/architecture.md",
         "promptPath": ".codex/gatekeeper/owner-addition.md",
         "schemaPath": ".codex/gatekeeper/owner-addition.schema.json"
+      },
+      "adoptionEvidence": {
+        "producer": "github-actions",
+        "workflowPath": ".github/workflows/architecture-gate.yml",
+        "jobName": "architecture-gate / owner-addition"
       }
     }
   }
