@@ -4,7 +4,7 @@
   "branches": {
     "main": {
       "mode": "procedural",
-      "model": "gpt-6-sol",
+      "model": "gpt-6-luna",
       "reasoningEffort": "low",
       "authorityManifestPath": ".codex/gatekeeper/authorities.json",
       "authorityLimits": {
