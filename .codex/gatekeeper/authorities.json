@@ -6,6 +6,12 @@
       "repository": "self",
       "revision": "authority-revision",
       "path": "docs/architecture.md"
+    },
+    {
+      "id": "fixture-boundary",
+      "repository": "self",
+      "revision": "authority-revision",
+      "path": "docs/fixture-boundary.md"
     }
   ]
 }
