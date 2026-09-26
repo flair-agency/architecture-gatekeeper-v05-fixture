@@ -4,7 +4,7 @@
   "branches": {
     "main": {
       "mode": "enforced",
-      "model": "gpt-6-sol",
+      "model": "gpt-6-luna",
       "reasoningEffort": "low",
       "authorityManifestPath": ".codex/gatekeeper/authorities.json",
       "authorityLimits": {
@@ -23,7 +23,7 @@
 },
     "v05-e2e": {
       "mode": "enforced",
-      "model": "gpt-6-sol",
+      "model": "gpt-6-luna",
       "reasoningEffort": "low",
       "authorityManifestPath": ".codex/gatekeeper/authorities.json",
       "authorityLimits": {
