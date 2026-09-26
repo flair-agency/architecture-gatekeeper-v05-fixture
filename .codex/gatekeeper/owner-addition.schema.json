@@ -1,0 +1,15 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["eligible", "onlyMissingDecision", "preservesExistingRules", "noContradiction", "noUnsupportedCompletionClaim", "noUnrelatedUnresolvedChoices", "matchesOrdinaryOwnerDecision", "summary"],
+  "properties": {
+    "eligible": { "type": "boolean" },
+    "onlyMissingDecision": { "type": "boolean" },
+    "preservesExistingRules": { "type": "boolean" },
+    "noContradiction": { "type": "boolean" },
+    "noUnsupportedCompletionClaim": { "type": "boolean" },
+    "noUnrelatedUnresolvedChoices": { "type": "boolean" },
+    "matchesOrdinaryOwnerDecision": { "type": "boolean" },
+    "summary": { "type": "string" }
+  }
+}
