@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
         with:
           repository: flair-agency/codex-action
-          ref: a08d8428145bbbe903d46d6b41c9585690c13d16
+          ref: 2cb2e1eb0dcd55564bacb0d36a16f294d4ace51c
           persist-credentials: false
       - name: Setup pnpm
         uses: pnpm/action-setup@02f6c237bd2518259fed6c71566509edfb3f2b74 # v4
