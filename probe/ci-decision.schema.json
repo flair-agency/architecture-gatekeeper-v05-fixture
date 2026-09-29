@@ -31,7 +31,8 @@
         "additionalProperties": false,
         "required": [
           "title",
-          "body"
+          "body",
+          "location"
         ],
         "properties": {
           "title": {
@@ -43,7 +44,10 @@
             "minLength": 1
           },
           "location": {
-            "type": "object",
+            "type": [
+              "object",
+              "null"
+            ],
             "additionalProperties": false,
             "required": [
               "path",
