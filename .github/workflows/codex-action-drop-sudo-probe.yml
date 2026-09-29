@@ -1,7 +1,8 @@
 name: Codex Action drop-sudo runtime probe
 
 on:
-  workflow_dispatch:
+  push:
+    branches: [codex/action-linux-probe]
 
 permissions:
   contents: read
@@ -19,7 +20,8 @@ jobs:
         uses: flair-agency/codex-action@8d35ab0e294c9ca3603f738c9cdf74d53081852f
         with:
           openai-api-key: ${{ secrets.OPENAI_API_KEY }}
-          prompt: Reply with OK.
+          prompt: Return a valid JSON decision using the supplied schema.
+          output-schema-file: probe/ci-decision.schema.json
           model: gpt-6-luna
           effort: low
           sandbox: read-only
