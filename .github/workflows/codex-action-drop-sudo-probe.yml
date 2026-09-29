@@ -1,0 +1,27 @@
+name: Codex Action drop-sudo runtime probe
+
+on:
+  push:
+    branches: [codex/action-linux-probe]
+
+permissions:
+  contents: read
+
+jobs:
+  runtime-probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout fixture
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+        with:
+          persist-credentials: false
+      - name: Run pinned Action without a model request
+        id: codex
+        uses: flair-agency/codex-action@8d35ab0e294c9ca3603f738c9cdf74d53081852f
+        with:
+          openai-api-key: synthetic-probe-only
+          responses-api-endpoint: http://127.0.0.1:9
+          prompt: No model request; --version must exit first.
+          sandbox: read-only
+          safety-strategy: drop-sudo
+          codex-args: '["--version"]'
