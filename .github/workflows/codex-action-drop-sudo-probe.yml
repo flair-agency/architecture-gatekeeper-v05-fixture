@@ -1,8 +1,7 @@
 name: Codex Action drop-sudo runtime probe
 
 on:
-  push:
-    branches: [codex/action-linux-probe]
+  workflow_dispatch:
 
 permissions:
   contents: read
