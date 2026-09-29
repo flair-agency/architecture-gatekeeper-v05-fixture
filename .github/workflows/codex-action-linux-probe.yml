@@ -1,0 +1,34 @@
+name: Codex Action Linux probe
+
+on:
+  push:
+    branches: [codex/action-linux-probe]
+
+permissions:
+  contents: read
+
+jobs:
+  test-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout pinned Action source
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+        with:
+          repository: flair-agency/codex-action
+          ref: a08d8428145bbbe903d46d6b41c9585690c13d16
+          persist-credentials: false
+      - name: Setup pnpm
+        uses: pnpm/action-setup@02f6c237bd2518259fed6c71566509edfb3f2b74 # v4
+        with:
+          run_install: false
+      - name: Setup Node.js
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
+        with:
+          node-version: 22
+          cache: pnpm
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Typecheck and Linux tests
+        run: |
+          pnpm run check
+          pnpm test
