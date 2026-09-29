@@ -10,6 +10,8 @@ jobs:
     permissions:
       contents: read
       pull-requests: write
+      id-token: write
+      attestations: write
     # Temporary Issue #207 E2E: exercise the exact unmerged Gatekeeper revision.
     uses: flair-agency/architecture-gatekeeper/.github/workflows/architecture-gate.yml@dbc90f41eac0b90ab688f66d65b9aec99b7db080
     with:
