@@ -15,12 +15,11 @@ jobs:
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
         with:
           persist-credentials: false
-      - name: Run pinned Action against unreachable local endpoint
+      - name: Run pinned Action with fixture reviewer
         id: codex
         uses: flair-agency/codex-action@8d35ab0e294c9ca3603f738c9cdf74d53081852f
         with:
-          openai-api-key: synthetic-probe-only
-          responses-api-endpoint: http://127.0.0.1:9
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
           prompt: Reply with OK.
           model: gpt-6-luna
           effort: low
