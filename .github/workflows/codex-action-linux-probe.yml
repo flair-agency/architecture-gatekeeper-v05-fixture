@@ -1,0 +1,50 @@
+name: Codex Action Linux Runtime Probe
+
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/codex-action-linux-probe.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  verify-codex-action:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Check out fixture
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Check out the exact Codex Action candidate
+        uses: actions/checkout@v4
+        with:
+          repository: flair-agency/codex-action
+          ref: ae8040b26890e655542317c3dad6ade14b7065cd
+          path: codex-action
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Set up pnpm
+        run: |
+          corepack enable
+          corepack prepare pnpm@10.33.0 --activate
+
+      - name: Install locked dependencies
+        working-directory: codex-action
+        run: pnpm install --frozen-lockfile
+
+      - name: Typecheck
+        working-directory: codex-action
+        run: pnpm exec tsc --noEmit
+
+      - name: Build and run model-free tests, including Linux drop-sudo coverage
+        working-directory: codex-action
+        run: pnpm test
