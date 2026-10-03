@@ -14,7 +14,8 @@ Return BLOCK for a correctable contradiction of selected authority.
 Return OWNER_DECISION only for a genuine ownership choice the selected authority
 does not settle; describe it and supply its stable ownerDecisionId.
 Return PASS when the proposed change conforms and no ownership choice is open.
-For PASS or BLOCK, use an empty ownerDecisionId because no missing-decision
-adoption is requested. Report exactly ["synthetic-architecture",
+For every decision, supply a nonempty stable ownerDecisionId matching the
+selected schema. On PASS or BLOCK it identifies the reviewed ownership topic;
+only OWNER_DECISION requests a missing-decision adoption. Report exactly ["synthetic-architecture",
 "fixture-boundary"] in authorityIds, matching the complete protected Authority
 Set, and report authoritySetDigest exactly as supplied in that set.
