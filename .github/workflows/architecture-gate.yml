@@ -10,7 +10,7 @@ jobs:
     permissions:
       contents: read
       pull-requests: write
-    uses: flair-agency/architecture-gatekeeper/.github/workflows/architecture-gate.yml@604ea875247969f4541d3f179ba89ba40fcc8e38
+    uses: flair-agency/architecture-gatekeeper/.github/workflows/architecture-gate-consumer.yml@6120d86ff22e4262a11f1061fde7f62d03a96c60
     with:
       protected-review-instructions: true
     secrets:
