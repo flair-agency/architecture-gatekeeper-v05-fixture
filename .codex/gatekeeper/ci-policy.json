@@ -14,6 +14,11 @@
         "maxTotalBytes": 262144,
         "maxPromptBytes": 524288
       },
+      "execution": {
+        "reviewJobTimeoutMinutes": 7,
+        "reviewStepTimeoutMinutes": 5,
+        "codexProfile": "standard"
+      },
       "ownerAddition": {
         "version": 2,
         "grade": "G0",
