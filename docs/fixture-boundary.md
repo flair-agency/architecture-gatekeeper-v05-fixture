@@ -1,4 +1,15 @@
 # Fixture boundary
 
-This repository is a disposable synthetic test consumer. It contains no
-production service or customer data.
+This repository is a disposable synthetic test consumer. It contains no production service or customer data.
+
+## Owner-approved preview.3 seed selection
+
+On 2026-10-07 the fixture owner approved the exact replacement setup in the private v9 proposal (SHA-256 `8b5df1f6922d71eed29868aa91e1f69487758623de0496ffb0e5f3ab8d790c43`). This section records the prior selection for branch `preview-3-e2e-v2` only. It authorizes seed setup and the bounded, synthetic `preview-unverified-procedure-v1` profile described below; it does not authenticate an owner, enable G0 or a trusted acceptance route, select a LIVE consumer architecture, or claim release readiness. Seed setup runs no model and creates no review case.
+
+The full selected Authority Set is exactly two same-repository regular files in order: `synthetic-architecture` at `docs/architecture.md`, then `fixture-boundary` at `docs/fixture-boundary.md`. The canonical selector is `.codex/gatekeeper/preview-lifecycle.json`; the target policy is `.codex/gatekeeper/ci-policy.json`. Reviewer: `gpt-6-luna`, reasoning `low`. The selected consumer workflow is `flair-agency/architecture-gatekeeper/.github/workflows/architecture-gate-consumer.yml@3f71fece350c3b5004cc81a7cb2253569a91e6b5`, binding the runtime to that same source SHA. The frozen package is `@flair-agency/architecture-gatekeeper@0.6.0-preview.3`, archive SHA-256 `46b3f4947ff6db2d672a8c766db13c81d92dd2bcbe15fdce6268f4a607e4d302`, npm SRI `sha512-nRiPFpR3Tz++N+cRP3oJ7mH4B9NGEaEsJLTIoTttwVzifkAOmeAkXwIOWzfKOXceYzjPjyjxSFAkMeASifqGbw==`.
+
+The host-generation schema is selected by the workflow caller at `.codex/gatekeeper/preview-host-decision.schema.json`; The local preview selector uses `.codex/gatekeeper/preview-decision.schema.json`. The strict host schema uses required nullable sentinel fields for absent optional values. Existing deterministic validation retains `valid=true` and exact target-specific `ownerDecisionId` on OWNER_DECISION. The local schema uses only the frozen runtime's supported schema keywords; existing lifecycle and authority validators enforce the exact selected member set and, for v2, exact digest binding. The hosted path enforces member completeness and digest format but does not claim member ordering or digest equality.
+
+The five selected limits are 16,384 manifest bytes, 16 members, 65,536 bytes per member, 262,144 aggregate bytes, and 524,288 complete prompt bytes. Requested protection is strict required check `architecture-gate / accept` from App 15368, admins enforced, force-push and deletion disabled. Producer authentication, exact-claim authorization, quorum, policy protection, host enforcement, and canonical transition remain `UNVERIFIED`; this selection establishes no trusted route, G0, LIVE architecture, or release claim.
+
+This target selects ordinary completed BLOCK and a possible later addition only for the exact missing `fixture-release-notes-owner` decision if an actual ordinary review returns that ID. It remains unresolved in this seed.
