@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "decision",
+    "summary",
+    "ownerDecisionId",
+    "authorityFiles",
+    "authorityIds",
+    "valid"
+  ],
+  "properties": {
+    "decision": {
+      "type": "string",
+      "enum": [
+        "PASS",
+        "BLOCK",
+        "OWNER_DECISION"
+      ]
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "ownerDecisionId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "authorityFiles": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+        "type": "string",
+        "enum": [
+          "docs/architecture.md",
+          "docs/fixture-boundary.md"
+        ]
+      }
+    },
+    "authorityIds": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+        "type": "string",
+        "enum": [
+          "synthetic-architecture",
+          "fixture-boundary"
+        ]
+      }
+    },
+    "valid": {
+      "type": "boolean"
+    }
+  }
+}

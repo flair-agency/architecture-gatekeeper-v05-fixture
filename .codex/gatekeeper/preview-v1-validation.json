@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "when": {
+        "path": "/decision",
+        "equals": "PASS"
+      },
+      "require": {
+        "path": "/valid",
+        "equals": true
+      },
+      "message": "Legacy v1 M PASS requires valid=true."
+    },
+    {
+      "when": {
+        "path": "/decision",
+        "equals": "OWNER_DECISION"
+      },
+      "require": {
+        "path": "/ownerDecisionId",
+        "equals": "fixture-release-notes-owner"
+      },
+      "message": "Legacy OWNER_DECISION must use the selected unresolved ID fixture-release-notes-owner."
+    }
+  ]
+}

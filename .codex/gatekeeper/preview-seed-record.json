@@ -1,0 +1,87 @@
+{
+  "version": 1,
+  "kind": "preview3-owner-approved-fixture-seed",
+  "status": "seed-only; no review cases executed",
+  "approval": {
+    "proposal": "/private/tmp/agk-preview-fixture-owner-decision-proposal-v9.md",
+    "sha256": "8b5df1f6922d71eed29868aa91e1f69487758623de0496ffb0e5f3ab8d790c43",
+    "scope": "owner-approved target selection, schema arrangement, protection tuple and seed setup only; no model review cases"
+  },
+  "repository": "flair-agency/architecture-gatekeeper-v05-fixture",
+  "targetBranch": "preview-3-migration-e2e-v2",
+  "seedBaseSha": "f6262655eafa63f7f386108d67ad2f41906b35f8",
+  "selectedProcedure": "preview-unverified-procedure-v1",
+  "selectedPreviewProfile": "completed-block-v1",
+  "reviewer": {
+    "model": "gpt-6-luna",
+    "reasoningEffort": "low"
+  },
+  "gatekeeper": {
+    "repository": "flair-agency/architecture-gatekeeper",
+    "runtimeSourceSha": "3f71fece350c3b5004cc81a7cb2253569a91e6b5",
+    "workflowPath": ".github/workflows/architecture-gate-consumer.yml",
+    "workflowSha": "3f71fece350c3b5004cc81a7cb2253569a91e6b5",
+    "package": {
+      "name": "@flair-agency/architecture-gatekeeper",
+      "version": "0.6.0-preview.3",
+      "archiveSha256": "46b3f4947ff6db2d672a8c766db13c81d92dd2bcbe15fdce6268f4a607e4d302",
+      "integrity": "sha512-nRiPFpR3Tz++N+cRP3oJ7mH4B9NGEaEsJLTIoTttwVzifkAOmeAkXwIOWzfKOXceYzjPjyjxSFAkMeASifqGbw=="
+    }
+  },
+  "authoritySet": {
+    "manifestPath": ".codex/gatekeeper/authorities.json",
+    "members": [
+      {
+        "id": "synthetic-architecture",
+        "path": "docs/architecture.md"
+      },
+      {
+        "id": "fixture-boundary",
+        "path": "docs/fixture-boundary.md"
+      }
+    ]
+  },
+  "syntheticStartingChoices": [],
+  "unresolvedOwnerDecisions": [
+    "fixture-release-notes-owner"
+  ],
+  "requestedProtection": {
+    "requiredCheck": "architecture-gate / accept",
+    "requiredCheckAppId": 15368,
+    "strict": true,
+    "enforceAdmins": true,
+    "allowForcePushes": false,
+    "allowDeletions": false
+  },
+  "assurance": {
+    "producerAuthentication": "UNVERIFIED",
+    "exactClaimAuthorization": "UNVERIFIED",
+    "quorum": "UNVERIFIED",
+    "policyProtection": "UNVERIFIED",
+    "hostEnforcement": "UNVERIFIED",
+    "canonicalTransition": "UNVERIFIED"
+  },
+  "schemas": {
+    "v1PolicySelectedSchemaPath": ".codex/gatekeeper/preview-v1-decision.schema.json",
+    "localMigrationSchemaPath": ".codex/gatekeeper/preview-v1-decision.schema.json",
+    "v1CallerSchemaPathInput": ".codex/gatekeeper/preview-v1-host-decision.schema.json",
+    "v1CallerSchemaPathInputSelection": "ignored by policy-version 1; unused and unverified",
+    "successorV2CallerSchemaPathInput": ".codex/gatekeeper/preview-host-decision.schema.json",
+    "localSuccessorPreviewSchemaPath": ".codex/gatekeeper/preview-decision.schema.json",
+    "v1HostApiCompatibility": "not exercised; no hosted v1 review claim",
+    "localOwnerIdConstraint": "local v1 anyOf requires ownerDecisionId for OWNER_DECISION; deterministic rule requires exact unresolved target ID",
+    "hostedAuthorityFiles": "v1 policy-selected schema and existing legacy validator require complete file set; no host case run",
+    "successorLimitations": {
+      "hostedAuthorityIds": "complete set and no extras/duplicates; ordering not asserted",
+      "hostedDigest": "64-lowercase-hex shape only; exact equality not asserted by host validator",
+      "localAuthorityIds": "existing runtime validates exact complete set/count and rejects duplicates/extras; order not enforced",
+      "localDigest": "preview lifecycle compares exact prepared Authority Set digest for v2; no claim that JSON schema alone binds it"
+    }
+  },
+  "schemaLimitations": {
+    "hostedAuthorityIds": "complete set and no extras/duplicates; ordering not asserted",
+    "hostedDigest": "64-lowercase-hex shape only; exact equality not asserted by host validator",
+    "localAuthorityIds": "existing runtime validates exact complete set/count and rejects duplicates/extras; order not enforced",
+    "localDigest": "preview lifecycle compares exact prepared Authority Set digest for v2; no claim that the JSON schema alone binds it"
+  }
+}
