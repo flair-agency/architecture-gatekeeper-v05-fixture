@@ -1,17 +1,19 @@
-name: Architecture Gate
-
+name: Architecture Gate (preview.3 fixture)
 on:
   pull_request:
     types: [opened, synchronize, reopened, ready_for_review]
-
 jobs:
   architecture-gate:
     if: github.event.pull_request.draft == false
     permissions:
       contents: read
       pull-requests: write
-    uses: flair-agency/architecture-gatekeeper/.github/workflows/architecture-gate-consumer.yml@3c1f44d19245716b9e2ef2491f4bfb6409139d32
+    uses: flair-agency/architecture-gatekeeper/.github/workflows/architecture-gate-consumer.yml@3f71fece350c3b5004cc81a7cb2253569a91e6b5
     with:
+      policy-path: .codex/gatekeeper/ci-policy.json
+      prompt-path: .codex/gatekeeper/preview-v1-prompt.md
+      schema-path: .codex/gatekeeper/preview-v1-decision.schema.json
+      validation-path: .codex/gatekeeper/preview-v1-validation.json
       protected-review-instructions: true
     secrets:
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}

@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "when": {
+        "path": "/decision",
+        "equals": "PASS"
+      },
+      "require": {
+        "path": "/valid",
+        "equals": true
+      },
+      "message": "Successor review PASS requires valid=true."
+    },
+    {
+      "when": {
+        "path": "/decision",
+        "equals": "BLOCK"
+      },
+      "require": {
+        "path": "/valid",
+        "equals": true
+      },
+      "message": "Successor review BLOCK requires valid=true."
+    },
+    {
+      "when": {
+        "path": "/decision",
+        "equals": "OWNER_DECISION"
+      },
+      "require": {
+        "path": "/valid",
+        "equals": true
+      },
+      "message": "Successor OWNER_DECISION requires valid=true."
+    }
+  ]
+}

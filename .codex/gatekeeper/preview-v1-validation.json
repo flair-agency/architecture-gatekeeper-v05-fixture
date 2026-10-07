@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "when": {
+        "path": "/decision",
+        "equals": "PASS"
+      },
+      "require": {
+        "path": "/valid",
+        "equals": true
+      },
+      "message": "Legacy v1 M PASS requires valid=true."
+    }
+  ]
+}
