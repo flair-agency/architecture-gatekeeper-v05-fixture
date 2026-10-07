@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "when": {
+        "path": "/decision",
+        "equals": "PASS"
+      },
+      "require": {
+        "path": "/valid",
+        "equals": true
+      },
+      "message": "Fixture ordinary PASS requires deterministic valid=true."
+    },
+    {
+      "when": {
+        "path": "/decision",
+        "equals": "BLOCK"
+      },
+      "require": {
+        "path": "/valid",
+        "equals": true
+      },
+      "message": "Fixture ordinary BLOCK requires deterministic valid=true."
+    },
+    {
+      "when": {
+        "path": "/decision",
+        "equals": "OWNER_DECISION"
+      },
+      "require": {
+        "path": "/valid",
+        "equals": true
+      },
+      "message": "Fixture OWNER_DECISION requires deterministic valid=true."
+    },
+    {
+      "when": {
+        "path": "/decision",
+        "equals": "OWNER_DECISION"
+      },
+      "require": {
+        "path": "/ownerDecisionId",
+        "equals": "fixture-release-notes-owner"
+      },
+      "message": "OWNER_DECISION must use the approved target ID fixture-release-notes-owner."
+    }
+  ]
+}

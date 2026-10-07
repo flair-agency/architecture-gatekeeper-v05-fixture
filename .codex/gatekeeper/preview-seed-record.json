@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "kind": "preview3-host-only-owner-approved-fixture-seed",
+  "status": "seed-only; no review cases executed",
+  "approval": {
+    "proposal": "/private/tmp/agk-preview3-host-diagnosis-v9/host-only-correction-proposal.md",
+    "sha256": "e32ab0dbbc6dec1fe7a2bfdbf79c83a52e5e1b92d67778a0b95d3b04ae4f9001",
+    "humanApproval": "\u627f\u8a8d\u3057\u307e\u3059",
+    "scope": "host-only fixture seed setup and bounded synthetic ordinary review procedure for this exact branch; no model review cases, owner authentication, trusted acceptance, G0, LIVE architecture, or release claim"
+  },
+  "repository": "flair-agency/architecture-gatekeeper-v05-fixture",
+  "targetBranch": "preview-3-host-e2e-v1",
+  "seedBaseSha": "f6262655eafa63f7f386108d67ad2f41906b35f8",
+  "selectedProcedure": "preview-unverified-procedure-v1",
+  "selectedPreviewProfile": "completed-block-v1 (follow-on trigger only; ordinary outcome is candidate-derived)",
+  "reviewer": {
+    "model": "gpt-6-luna",
+    "reasoningEffort": "low"
+  },
+  "gatekeeper": {
+    "repository": "flair-agency/architecture-gatekeeper",
+    "runtimeSourceSha": "3f71fece350c3b5004cc81a7cb2253569a91e6b5",
+    "workflowPath": ".github/workflows/architecture-gate-consumer.yml",
+    "workflowSha": "3f71fece350c3b5004cc81a7cb2253569a91e6b5",
+    "package": {
+      "name": "@flair-agency/architecture-gatekeeper",
+      "version": "0.6.0-preview.3",
+      "archiveSha256": "46b3f4947ff6db2d672a8c766db13c81d92dd2bcbe15fdce6268f4a607e4d302",
+      "integrity": "sha512-nRiPFpR3Tz++N+cRP3oJ7mH4B9NGEaEsJLTIoTttwVzifkAOmeAkXwIOWzfKOXceYzjPjyjxSFAkMeASifqGbw=="
+    }
+  },
+  "authoritySet": {
+    "manifestPath": ".codex/gatekeeper/authorities.json",
+    "members": [
+      {
+        "id": "synthetic-architecture",
+        "path": "docs/architecture.md"
+      },
+      {
+        "id": "fixture-boundary",
+        "path": "docs/fixture-boundary.md"
+      }
+    ]
+  },
+  "unresolvedOwnerDecisions": [
+    "fixture-release-notes-owner"
+  ],
+  "requestedProtection": {
+    "requiredCheck": "architecture-gate / accept",
+    "requiredCheckAppId": 15368,
+    "strict": true,
+    "enforceAdmins": true,
+    "allowForcePushes": false,
+    "allowDeletions": false
+  },
+  "assurance": {
+    "producerAuthentication": "UNVERIFIED",
+    "exactClaimAuthorization": "UNVERIFIED",
+    "quorum": "UNVERIFIED",
+    "policyProtection": "UNVERIFIED",
+    "hostEnforcement": "UNVERIFIED",
+    "canonicalTransition": "UNVERIFIED"
+  },
+  "schemas": {
+    "hostGenerationPath": ".codex/gatekeeper/preview-host-decision.schema.json",
+    "localPreviewPath": ".codex/gatekeeper/preview-decision.schema.json",
+    "hostOwnerIdConstraint": "deterministic validation rule exact match for OWNER_DECISION; host generation schema uses nullable value and does not express cross-field condition",
+    "localOwnerIdConstraint": "local schema anyOf requires ownerDecisionId for OWNER_DECISION; enum restricts it to this target"
+  },
+  "schemaLimitations": {
+    "hostedAuthorityIds": "complete set and no extras/duplicates; ordering not asserted",
+    "hostedDigest": "64-lowercase-hex shape only; exact equality not asserted by host validator",
+    "localAuthorityIds": "existing runtime validates exact complete set/count and rejects duplicates/extras; order not enforced",
+    "localDigest": "preview lifecycle compares exact prepared Authority Set digest for v2; no claim that the JSON schema alone binds it"
+  },
+  "hostLimits": {
+    "maxManifestBytes": 16384,
+    "maxMembers": 16,
+    "maxMemberBytes": 65536,
+    "maxAggregateBytes": 262144,
+    "maxPromptBytes": 524288
+  },
+  "hostGenerationSchemaSha256": "9014dec9f5717fb81cf885a29a864463b3e8197e567fe92260f1a53c0faef3a2",
+  "hostValidationRulesSha256": "9401a8ad1c56d213828112df5d067dc3eccbc27c6caa5c2f2e42bdd9c7eb37bf",
+  "promptDigestEqualityClaim": false
+}

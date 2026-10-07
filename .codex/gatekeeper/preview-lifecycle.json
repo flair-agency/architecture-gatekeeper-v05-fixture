@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "profile": "preview-unverified-procedure-v1",
+  "repository": "flair-agency/architecture-gatekeeper-v05-fixture",
+  "targetBranch": "preview-3-host-e2e-v1",
+  "governancePath": "docs/fixture-boundary.md",
+  "authorization": "Owner-approved host-only preview.3 fixture setup under proposal SHA-256 e32ab0dbbc6dec1fe7a2bfdbf79c83a52e5e1b92d67778a0b95d3b04ae4f9001; synthetic UNVERIFIED procedure only; not owner authentication or acceptance.",
+  "policyPath": ".codex/gatekeeper/ci-policy.json",
+  "promptPath": ".codex/gatekeeper/preview-prompt.md",
+  "schemaPath": ".codex/gatekeeper/preview-decision.schema.json",
+  "validationPath": ".codex/gatekeeper/preview-rules.json",
+  "eligibilitySchemaPath": ".codex/gatekeeper/preview-eligibility.schema.json",
+  "eligibilityValidationPath": ".codex/gatekeeper/preview-eligibility-rules.json",
+  "amendmentTriggerProfile": "completed-block-v1",
+  "callerPath": ".github/workflows/architecture-gate.yml",
+  "authorityPaths": [
+    "docs/architecture.md",
+    "docs/fixture-boundary.md"
+  ],
+  "migrationPaths": [
+    ".codex/gatekeeper/preview-lifecycle.json",
+    ".codex/gatekeeper/ci-policy.json",
+    ".github/workflows/architecture-gate.yml"
+  ],
+  "maxPromptBytes": 524288
+}
