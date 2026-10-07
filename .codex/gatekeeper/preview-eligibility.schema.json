@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "decision",
+    "summary",
+    "authorityIds",
+    "valid"
+  ],
+  "properties": {
+    "decision": {
+      "type": "string",
+      "enum": [
+        "ELIGIBLE",
+        "INELIGIBLE"
+      ]
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "authorityIds": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "string",
+        "enum": [
+          "synthetic-architecture",
+          "fixture-boundary"
+        ]
+      }
+    },
+    "valid": {
+      "type": "boolean"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "when": {
+        "path": "/decision",
+        "equals": "ELIGIBLE"
+      },
+      "require": {
+        "path": "/valid",
+        "equals": true
+      },
+      "message": "Preview eligibility requires deterministic valid=true."
+    }
+  ]
+}

@@ -7,3 +7,7 @@ the synthetic choice recorded here.
 ## Synthetic ownership
 
 The fixture release pipeline owns generation and publication of release notes.
+
+## Fixture report format
+
+Decision `fixture-report-format`: the fixture report format is JSON-only. YAML output is not selected.

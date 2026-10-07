@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "decision",
+    "summary",
+    "ownerDecisionId",
+    "authorityIds",
+    "authoritySetDigest",
+    "valid"
+  ],
+  "properties": {
+    "decision": {
+      "type": "string",
+      "enum": [
+        "PASS",
+        "BLOCK",
+        "OWNER_DECISION"
+      ]
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "ownerDecisionId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "authoritySetDigest": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "authorityIds": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+        "type": "string",
+        "enum": [
+          "synthetic-architecture",
+          "fixture-boundary"
+        ]
+      }
+    },
+    "valid": {
+      "type": "boolean"
+    }
+  }
+}
