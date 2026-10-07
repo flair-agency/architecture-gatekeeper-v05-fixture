@@ -1,0 +1,4 @@
+format: yaml
+release: 0.6.0-preview.3
+notes:
+  - Synthetic release notes for the fixture report-format case.
