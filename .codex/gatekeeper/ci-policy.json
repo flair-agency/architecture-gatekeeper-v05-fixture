@@ -16,6 +16,19 @@
         "maxTotalBytes": 262144,
         "maxPromptBytes": 524288
       }
+    },
+    "preview-4-host-e2e-v1": {
+      "mode": "enforced",
+      "model": "gpt-6-luna",
+      "reasoningEffort": "low",
+      "authorityManifestPath": ".codex/gatekeeper/authorities.json",
+      "authorityLimits": {
+        "maxManifestBytes": 16384,
+        "maxMembers": 16,
+        "maxFileBytes": 65536,
+        "maxTotalBytes": 262144,
+        "maxPromptBytes": 524288
+      }
     }
   }
 }
