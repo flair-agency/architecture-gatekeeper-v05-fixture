@@ -56,3 +56,35 @@ separate `fixture-release-notes-owner` remains unresolved in this seed and
 may be named only when the candidate materially requires that choice. This
 synthetic procedure is `UNVERIFIED` and creates no owner authentication or
 acceptance claim.
+
+## Owner-authorized host-only preview.4 fixture target
+
+The fixture owner approved one additional disposable target,
+`preview-4-host-e2e-v1`, for the exact candidate
+`@flair-agency/architecture-gatekeeper@0.6.0-preview.4` from protected-main
+source commit `7c35e06741fa88fc3972631e1196586e48b74a7b`. The final archive is
+311,411 bytes, SHA-256
+`7f20628db495d04f5cdb262a45be3fc5a677f1d8367e7ebcb5fe872293372a32`, npm SRI
+`sha512-SJOXn+qCo7EGEF4jBeltQn3rO3dJgt80TNeU8DuYxy38x1DKU8zBpnFfjF7Ca49pQSiTwvIzX3oSZmvDaAlUlA==`. The package is not published. The hosted workflow pins
+source commit `7c35e06741fa88fc3972631e1196586e48b74a7b`; the host procedure
+will not claim that it installed the npm archive. The exact approval event and
+proposal digest are recorded in the private setup receipt.
+
+This authorization applies only to the new synthetic host-test target. Keep
+the existing protected `preview-3-host-e2e-v1` target, its controls, protection
+and evidence unchanged. The preview.4 target selects the same two Authority
+members in the same order: `synthetic-architecture` at `docs/architecture.md`,
+then `fixture-boundary` at `docs/fixture-boundary.md`. It reuses the existing
+prompt, schemas, deterministic rules, lifecycle eligibility and
+`completed-block-v1` follow-on trigger. Its policy keeps the existing enforced
+mode, `gpt-6-luna` / `low` settings and limits of 16,384 manifest bytes, 16
+members, 65,536 bytes per member, 262,144 aggregate bytes and 524,288 prompt
+bytes. Protect the new target with strict required check `architecture-gate /
+accept` from App 15368, admins enforced, force-push disabled and deletion
+disabled.
+
+The target remains a disposable, `UNVERIFIED` procedure. It does not
+authenticate an owner, select LIVE policy, enable G0 or a trusted acceptance
+route, claim package installation, or satisfy release gates. Its bounded
+purpose is to repeat one ordinary compatible-change PASS and one ordinary
+contradiction BLOCK, then close both PRs unmerged.
