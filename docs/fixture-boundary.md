@@ -88,3 +88,26 @@ authenticate an owner, select LIVE policy, enable G0 or a trusted acceptance
 route, claim package installation, or satisfy release gates. Its bounded
 purpose is to repeat one ordinary compatible-change PASS and one ordinary
 contradiction BLOCK, then close both PRs unmerged.
+
+## Preview.4 fixed-candidate binding refresh
+
+For the existing fixture target `preview-4-host-e2e-v1`, the fixture owner selects protected-main source commit
+`2ea9ebe12be9d233c41a2dbc61e7a84caf3abbfb` and the exact unpublished archive
+`@flair-agency/architecture-gatekeeper@0.6.0-preview.4` for the existing
+`preview-4-host-e2e-v1` target. The archive is 327,196 bytes, SHA-256
+`c6ef3b8ad49ffe82cd9013bc67ce8f16bf05ac012ddea796bd83ad1b7d02c066`, npm SRI
+`sha512-SrrlPIuQ0n1c4MEWc7mOwny3uaJsnF546ezft8IoDHzugGv6Yh5/0AG8FbWRDEidBLlxbOuVvdHwJ6oiR+rmFA==`.
+The package is not published. After this addendum is committed and read back, the hosted caller selects the
+same protected source commit; it does not claim that the host workflow installs
+the npm archive. The package
+identity and hosted source selection remain separate bindings.
+
+This refresh supersedes only the earlier preview.4 source/archive binding and
+its caller pin for this same target. It retains the existing target's two
+Authority members and order, policy, prompt, schemas, deterministic rules,
+lifecycle eligibility, follow-on trigger, reviewer model and effort, limits,
+strict required check, App identity and protection settings. It changes no
+assurance claim or acceptance route. The target remains disposable and
+`UNVERIFIED`; the bounded procedure is one ordinary compatible-change `PASS`
+and one ordinary contradiction `BLOCK`, then close both PRs unmerged. It does
+not claim portable CLI or archive-install proof from the hosted workflow.
