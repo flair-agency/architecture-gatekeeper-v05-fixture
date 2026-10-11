@@ -8,7 +8,7 @@ jobs:
     permissions:
       contents: read
       pull-requests: write
-    uses: flair-agency/architecture-gatekeeper/.github/workflows/architecture-gate-consumer.yml@7c35e06741fa88fc3972631e1196586e48b74a7b
+    uses: flair-agency/architecture-gatekeeper/.github/workflows/architecture-gate-consumer.yml@bb7c6078766e2d63cbcaf91e8eab72a7bd46a83f
     with:
       policy-path: .codex/gatekeeper/ci-policy.json
       prompt-path: .codex/gatekeeper/preview-prompt.md
