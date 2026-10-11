@@ -88,3 +88,23 @@ authenticate an owner, select LIVE policy, enable G0 or a trusted acceptance
 route, claim package installation, or satisfy release gates. Its bounded
 purpose is to repeat one ordinary compatible-change PASS and one ordinary
 contradiction BLOCK, then close both PRs unmerged.
+
+## Preview.4 fixed-candidate binding refresh
+
+For the existing disposable target `preview-4-host-e2e-v1`, select protected-main
+source `bb7c6078766e2d63cbcaf91e8eab72a7bd46a83f` for the preview.4 host
+verification. This supersedes only the earlier source/archive binding in the
+preview.4 target section; the original authorization and its evidence remain
+historical. The candidate package is `@flair-agency/architecture-gatekeeper@0.6.0-preview.4`,
+320,321 bytes, SHA-256 `ba519081caf2f02a95a49f4b1cfad23d3f764a9a3156e9bdbd6188db32cdf04d`,
+SRI `sha512-Itj3OVvvlEsWa0Ie+08LefTTxut4ZqWpPPV6RhcLJV5tCw7fa5ZwQZU3iKf4O+PV2YQZelMlQkqWpGIdwjI4qg==`. It remains unpublished. The host workflow uses
+the same fixed source and does not claim archive installation.
+
+Keep the selected two-member Authority Set, prompt, schemas, deterministic
+rules, lifecycle eligibility, trigger profile, model/effort and limits unchanged.
+Keep both targets' protection and the preview.3 target and evidence unchanged.
+The permitted exercise remains one compatible ordinary PASS reaching the
+required acceptance check and one contradictory BLOCK retaining failed
+acceptance, then close both synthetic PRs unmerged. No policy weakening,
+trusted acceptance, G0, LIVE selection, consumer adoption, or publication is
+authorized by this binding refresh.
