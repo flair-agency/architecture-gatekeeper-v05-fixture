@@ -88,3 +88,40 @@ authenticate an owner, select LIVE policy, enable G0 or a trusted acceptance
 route, claim package installation, or satisfy release gates. Its bounded
 purpose is to repeat one ordinary compatible-change PASS and one ordinary
 contradiction BLOCK, then close both PRs unmerged.
+
+## Owner-authorized host-only preview.4 candidate-specific target
+
+The fixture owner selects one distinct disposable target,
+`preview-4-host-e2e-2ea9ebe-v1`, for the exact protected-main source commit
+`2ea9ebe12be9d233c41a2dbc61e7a84caf3abbfb` and the unpublished
+`@flair-agency/architecture-gatekeeper@0.6.0-preview.4` archive. The archive
+is 327,196 bytes, SHA-256
+`c6ef3b8ad49ffe82cd9013bc67ce8f16bf05ac012ddea796bd83ad1b7d02c066`, npm SRI
+`sha512-SrrlPIuQ0n1c4MEWc7mOwny3uaJsnF546ezft8IoDHzugGv6Yh5/0AG8FbWRDEidBLlxbOuVvdHwJ6oiR+rmFA==`. It is not published. This target's workflow
+pin selects that source; it does not claim the host workflow installs the npm
+archive or that a portable CLI was exercised.
+
+This is a new ordinary synthetic host-test target with its own initial
+selection, limited to this exact target name and candidate. It does not claim
+amendment, adoption, G0, `ACTIVE`, or a transition of the existing target. The
+historical `preview-seed-record.json` remains unchanged and is not evidence for
+this new selection. The existing `preview-4-host-e2e-v1` source/archive
+selection, caller, lifecycle target, policy entry, PR #34 and PR #35 evidence
+remain unchanged. The full selected Authority
+Set remains exactly `synthetic-architecture` at `docs/architecture.md` then
+`fixture-boundary` at `docs/fixture-boundary.md`. It reuses the existing
+prompt, schemas, deterministic rules, `gpt-6-luna` / `low` reviewer, and exact
+manifest/member/file/aggregate/prompt limits. Add a branch-specific enforced
+policy entry with those same values; the default local-only policy is not
+acceptable for this target. Before any test case, configure and read back the
+new target's strict required check `architecture-gate / accept` from App 15368,
+admins enforced, force-push disabled and deletion disabled, matching the
+existing target controls.
+
+The only planned cases are one ordinary compatible-change PASS and one
+completed, semantically validated contradiction BLOCK/failing accept. Preserve
+all policy, review, report and accept evidence and close both case PRs unmerged.
+This authorization is limited to this exact new synthetic target and candidate;
+it does not alter `preview-3-host-e2e-v1` or `preview-4-host-e2e-v1`, authorize
+main integration, publication, LIVE work, a policy exception or a new
+acceptance route.
