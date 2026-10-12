@@ -125,3 +125,69 @@ This authorization is limited to this exact new synthetic target and candidate;
 it does not alter `preview-3-host-e2e-v1` or `preview-4-host-e2e-v1`, authorize
 main integration, publication, LIVE work, a policy exception or a new
 acceptance route.
+
+
+## Proposed isolated published preview.4 v4 caller target v2 (approval pending)
+
+This local-only proposal selects one distinct disposable target,
+`preview-4-v4-caller-2ea9ebe-v2`, from existing preview.4 target head
+`43c285ca06b0fda4aa09fc51fcac9881d1a946f3`. Preview.4 is
+`PUBLISHED_VERIFIED`: package `@flair-agency/architecture-gatekeeper@0.6.0-preview.4`,
+source `2ea9ebe12be9d233c41a2dbc61e7a84caf3abbfb`, tag object
+`2a1cfd679e4f906b534196b04d4577e786e64d92`, publication run `38188542934`
+attempt 1, archive SHA-256
+`c6ef3b8ad49ffe82cd9013bc67ce8f16bf05ac012ddea796bd83ad1b7d02c066`, SRI
+`sha512-SrrlPIuQ0n1c4MEWc7mOwny3uaJsnF546ezft8IoDHzugGv6Yh5/0AG8FbWRDEidBLlxbOuVvdHwJ6oiR+rmFA==`. Offline archive install and smoke are
+already verified; this host procedure uses the caller's pinned source and does
+not claim the workflow installs that archive.
+
+The new target snapshot replaces only its own `.codex/gatekeeper/ci-policy.json`
+with a version-4 policy whose sole enforced branch entry is this v2 target; its
+default remains `local-only`. The caller already selects that exact fixed path
+and remains byte-for-byte unchanged. The reusable workflow resolves policy
+from each PR's recorded base SHA, so other branches keep their own recorded
+policy bytes and behavior. Existing branches, including v1 target
+`preview-4-v4-caller-2ea9ebe-v1`, its tag/PR, and the previous preview targets
+remain unchanged.
+
+This target selects the complete two-member Authority Set at the recorded base,
+in order: `synthetic-architecture` / `docs/architecture.md`, then
+`fixture-boundary` / `docs/fixture-boundary.md`. It selects `gpt-6-luna` /
+`low`, existing effective limits (16,384 manifest bytes, 16 members, 65,536
+bytes per member, 262,144 aggregate bytes, 524,288 prompt bytes), and existing
+v4 multi-document `OWNER_ADDITION` version 2, grade G0, scoped only to
+`synthetic-architecture` / `docs/architecture.md`. Retain strict required check
+`architecture-gate / accept` from App 15368, admins enforced, force-push and
+delete disabled on the new target only. This does not add a shared package
+responsibility or change a source/build/release contract.
+
+The single proposed B reuses the previously owner-approved synthetic decision
+ID `fixture-release-notes-owner` and exact sentence: “The fixture release-pipeline
+owner approves generated release notes before publication.” It appends that
+one sentence to `docs/architecture.md`; it changes no other file. Its annotated
+tag must be generated in the existing v2 format and bind the actual base, B,
+policy, complete Authority Set, decision ID, and authority byte hashes. The
+ordinary review must independently return `OWNER_DECISION` with that exact ID;
+the proposal does not treat the decision as already present or approved in
+current authority.
+
+One host case is proposed: prepare and validate ordinary review, and only on
+that exact ordinary decision run the separate eligibility review, then report
+and accept. Cap at one PR/event, at most two workflow Codex review/action
+invocations (ordinary once plus conditional eligibility once), zero refreshes,
+zero retries and zero merges. Configured automatic GitHub Code Review and
+Security Review integrations ran on v1 PR #38 and may run again; these are
+separate automatic integrations, not the workflow action cap, and no settings
+will be changed to suppress them. Preserve all raw responses and stop on the
+first policy/configuration failure, incomplete or unexpected semantic result,
+missing event merge SHA, merge/base/head mismatch, tag mismatch, report/accept
+failure, or unexpected metadata. With zero refreshes, the workflow event's
+`merge_commit_sha` remains unverified until the event occurs; offline checks
+cannot establish it. Close the one PR unmerged and read back closure.
+
+Any future report/accept success would be a pre-merge G0 pending result, not
+semantic PASS, adoption, or an ACTIVE/trusted route. The previous #38 event
+failed at the policy-path guard before either workflow Codex action and is
+retained, not replayed. This new proposal requires fresh explicit human approval
+for v2 target selection and the one bounded event. It does not reopen or
+rewrite the complete #407 caller matrix.
