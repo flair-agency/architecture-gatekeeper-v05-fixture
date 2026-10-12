@@ -24,10 +24,8 @@
       "minLength": 1
     },
     "ownerDecisionId": {
-      "type": [
-        "string",
-        "null"
-      ]
+      "type": "string",
+      "description": "Exact missing decision ID for OWNER_DECISION; empty string for PASS or BLOCK."
     },
     "authoritySetDigest": {
       "type": "string",

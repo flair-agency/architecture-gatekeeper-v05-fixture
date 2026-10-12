@@ -11,7 +11,7 @@ raise an unrelated unresolved choice. The separate
 `fixture-release-notes-owner` remains unresolved on this target; identify it
 only if this exact change materially requires resolving it. Report exactly
 both selected authority IDs in manifest order and the selected
-authoritySetDigest. The host checks member completeness and digest format
+authoritySetDigest. The required ownerDecisionId field is always a JSON string: return the exact missing decision ID only for OWNER_DECISION; use the empty string for PASS or BLOCK. The host checks member completeness and digest format
 only; it does not verify digest equality or ID order. `valid` is a
 deterministic schema/validator field, not an acceptance claim. Return only
 the selected schema.

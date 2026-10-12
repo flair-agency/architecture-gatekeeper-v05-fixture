@@ -125,3 +125,11 @@ This authorization is limited to this exact new synthetic target and candidate;
 it does not alter `preview-3-host-e2e-v1` or `preview-4-host-e2e-v1`, authorize
 main integration, publication, LIVE work, a policy exception or a new
 acceptance route.
+
+## Proposed isolated preview.4 v4 caller target
+
+This proposed selection covers only disposable branch `preview-4-v4-caller-2ea9ebe-v3`, based on this fixture's exact existing base. It selects frozen consumer workflow/source `2ea9ebe12be9d233c41a2dbc61e7a84caf3abbfb`, the complete two-member Authority Set already listed above, and `gpt-6-luna` / `low`. The branch-local v4 policy selects one enforced synthetic G0 OWNER_ADDITION-v2 target with limits of 16,384 manifest bytes, 16 members, 65,536 bytes per member, 262,144 aggregate bytes, and 524,288 complete prompt bytes; the default remains local-only.
+
+The host caller retains its fixed protected-base paths and selected workflow. Its ordinary output schema must be a closed root object with a required string `ownerDecisionId`; the prompt uses that exact ID only for `OWNER_DECISION` and an empty string for other semantic outcomes. This configuration changes no shared runtime, other target's recorded-base policy, or selected architecture responsibility. It records a fixture execution scope only; it does not predetermine an ordinary result, adopt a proposed missing decision, authenticate an owner, establish host enforcement, or select LIVE consumer policy.
+
+Any later execution requires separate explicit approval of this exact seed and bounded run plan. Preserve the target on unexpected results; one PR with a draft-open setup event and at most one ready-for-review event is proposed to avoid relying on an opened-event merge object. Only the ready event may admit the privileged workflow, with at most one ordinary and one conditional eligibility model action, and no retry, refresh, merge, or result-inducing edit.
