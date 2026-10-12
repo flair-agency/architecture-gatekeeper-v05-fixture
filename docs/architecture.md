@@ -7,3 +7,4 @@ the synthetic choice recorded here.
 ## Synthetic ownership
 
 The fixture release pipeline owns generation and publication of release notes.
+The fixture release-pipeline owner approves generated release notes before publication.
