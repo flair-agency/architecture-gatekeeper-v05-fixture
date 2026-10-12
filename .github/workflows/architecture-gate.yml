@@ -10,7 +10,7 @@ jobs:
       pull-requests: write
     uses: flair-agency/architecture-gatekeeper/.github/workflows/architecture-gate-consumer.yml@2ea9ebe12be9d233c41a2dbc61e7a84caf3abbfb
     with:
-      policy-path: .codex/gatekeeper/ci-policy.json
+      policy-path: .codex/gatekeeper/v4-caller-policy.json
       prompt-path: .codex/gatekeeper/preview-prompt.md
       schema-path: .codex/gatekeeper/preview-host-decision.schema.json
       validation-path: .codex/gatekeeper/preview-rules.json

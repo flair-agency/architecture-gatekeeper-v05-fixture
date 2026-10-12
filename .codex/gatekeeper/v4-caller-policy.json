@@ -1,0 +1,29 @@
+{
+  "version": 4,
+  "default": {
+    "mode": "local-only"
+  },
+  "branches": {
+    "preview-4-v4-caller-2ea9ebe-v1": {
+      "mode": "enforced",
+      "model": "gpt-6-luna",
+      "reasoningEffort": "low",
+      "authorityManifestPath": ".codex/gatekeeper/authorities.json",
+      "authorityLimits": {
+        "maxManifestBytes": 16384,
+        "maxMembers": 16,
+        "maxFileBytes": 65536,
+        "maxTotalBytes": 262144,
+        "maxPromptBytes": 524288
+      },
+      "ownerAddition": {
+        "version": 2,
+        "grade": "G0",
+        "authorityId": "synthetic-architecture",
+        "authorityPath": "docs/architecture.md",
+        "promptPath": ".codex/gatekeeper/preview-owner-addition-v2.md",
+        "schemaPath": ".codex/gatekeeper/preview-owner-addition-v2.schema.json"
+      }
+    }
+  }
+}
