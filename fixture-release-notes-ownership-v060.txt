@@ -1,0 +1,1 @@
+Proposal: The fixture application team owns generation and publication of release notes.
